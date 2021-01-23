@@ -1,9 +1,11 @@
 import './App.css';
-import { getRankingPilot } from './data/karts';
+import { getRankingByPilot, getRankingByRace,getGlobalRanking } from './data/karts.utils';
 
 function App() {
 
-  console.log(getRankingPilot({ name: "Richards Floyd", raceName: 'Race 0' }));
+  console.log('getRankingByRace',getRankingByRace('Race 0'));
+  console.log('getRankingByPilot',getRankingByPilot('Daniels Manning'));
+  console.log('getGlobalRanking',getGlobalRanking());
 
   return (
     <div className="App">
