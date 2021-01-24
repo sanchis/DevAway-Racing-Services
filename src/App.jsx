@@ -1,11 +1,14 @@
 import './App.css';
 import { getRankingByPilot, getRankingByRace, getGlobalRanking } from './data/karts.utils';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
-import Navbar from 'components/navbar';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import GlobalRanking from 'pages/global-ranking'
-import { Container, Section } from 'react-bulma-components'
+
+import Ranking from 'pages/ranking'
 import PilotRaces from 'pages/pilot-races'
+import Races from 'pages/races'
+
+import Navbar from 'components/navbar';
+import { Container, Section } from 'react-bulma-components'
 
 function App() {
 
@@ -23,19 +26,17 @@ function App() {
                             <Route
                                 exact
                                 path="/">
-                                <GlobalRanking></GlobalRanking>
+                                <Ranking></Ranking>
                             </Route>
                             <Route
                                 exact
                                 path="/pilot-races" >
                                 <PilotRaces></PilotRaces>
                             </Route>
-                            {/* <Route
-                            exact
-                            path="/page2"
-                            render={() => <Page2 />} />
-                            https://medium.com/@simonhoyos/enrutando-en-react-cd9e4ad6e3d3
-                        <Route component={PageError} /> */}
+                            <Route
+                                exact
+                                path="/races"
+                                render={() => <Races />} />
                         </Switch>
                     </Container>
                 </Section>

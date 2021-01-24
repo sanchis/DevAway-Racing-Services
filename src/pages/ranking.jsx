@@ -3,7 +3,7 @@ import { getGlobalRanking } from "data/karts.utils";
 
 
 const pilots = getGlobalRanking();
-export default function GlobalRanking() {
+export default function Ranking() {
     return (
         <>
             <h1 className="is-size-1">Global Ranking</h1>

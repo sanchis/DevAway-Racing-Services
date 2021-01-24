@@ -50,11 +50,7 @@ export function getPilotRace(pilot, raceName) {
  */
 export function getGlobalRanking() {
     const ranking = new Map();
-
-    /** Create empty array with number of races */
-    [...Array(RACES_COUNT).keys()].map(raceNumber =>
-        getRankingByRace(`Race ${raceNumber}`)
-    ).forEach((positions) => {
+    getRaces().forEach((positions) => {
         /** For every race set the pilot and position */
         positions.forEach((pilot, position) => {
             const valuePilot = ranking.get(pilot.name)?.position || 0;
@@ -66,6 +62,16 @@ export function getGlobalRanking() {
     return Array.from(ranking, ([name, pilot]) => (pilot))
         .sort((driver1, driver2) => driver1.position - driver2.position)
         .map(ranking => ranking.pilot);
+}
+
+/**
+ * Get all races championship
+ */
+export function getRaces() {
+    /** Create empty array with number of races */
+    return [...Array(RACES_COUNT).keys()].map(raceNumber =>
+        getRankingByRace(`Race ${raceNumber}`)
+    );
 }
 
 /**
