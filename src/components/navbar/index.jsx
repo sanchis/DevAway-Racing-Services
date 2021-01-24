@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
     const [isActive, setIsActive] = React.useState(false);
 
-
     return (
         <BulmaNavbar
             active={isActive}

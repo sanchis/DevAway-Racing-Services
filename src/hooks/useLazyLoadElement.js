@@ -12,7 +12,6 @@ export default function useLazyLoadElement() {
             if (el.isIntersecting) {
                 setDisplay(true);
                 observer.disconnect();
-                console.log(true);
             }
         };
 
