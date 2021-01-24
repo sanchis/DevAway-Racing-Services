@@ -1,3 +1,7 @@
+.pilot {
+    min-height: 106px;
+}
+
 .pilot .position{
     min-width: 45px;
 }
