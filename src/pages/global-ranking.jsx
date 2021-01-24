@@ -7,7 +7,7 @@ export default function GlobalRanking() {
     return (
         <>
             <h1 className="is-size-1">Global Ranking</h1>
-            {pilots.map((pilot, positon) => <Pilot key={pilot.name} position={positon + 1} pilot={pilot} ></Pilot>)}
+            {pilots.map((pilot, position) => <Pilot key={pilot.name} position={position + 1} pilot={pilot} ></Pilot>)}
         </>
     );
 }
