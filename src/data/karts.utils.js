@@ -6,7 +6,7 @@ import { RACES_COUNT } from '../config';
  * Get data form pilot name
  * @param {*} name 
  */
-function getPilot(name) {
+export function getPilot(name) {
     return drivers.find(driver => driver.name === name);
 }
 
@@ -14,10 +14,11 @@ function getPilot(name) {
  * Get Ranking by race name
  * @param {*} raceName 
  */
-function getRankingByRace(raceName) {
+export function getRankingByRace(raceName) {
     const raceDrivers = drivers.map(drv => {
         const { races, ...pilot } = drv;
-        return { pilot, race: getPilotRace(drv, raceName) }
+        pilot.race = getPilotRace(drv, raceName);
+        return pilot
     });
     const resultDrivers = raceDrivers.sort((driver1, driver2) =>
         sortTime(driver1.race.time, driver2.race.time)
@@ -29,7 +30,7 @@ function getRankingByRace(raceName) {
  * Get ranking by pilot name
  * @param {*} pilotName 
  */
-function getRankingByPilot(pilotName) {
+export function getRankingByPilot(pilotName) {
     const pilot = getPilot(pilotName);
     const races = pilot.races.map(race => getRankingByRace(race.name));
     return { pilot, races };
@@ -40,14 +41,14 @@ function getRankingByPilot(pilotName) {
  * @param {*} pilot 
  * @param {*} raceName 
  */
-function getPilotRace(pilot, raceName) {
+export function getPilotRace(pilot, raceName) {
     return pilot.races.find(race => race.name === raceName);
 }
 
 /**
  *  Get global ranking from championship
  */
-function getGlobalRanking() {
+export function getGlobalRanking() {
     const ranking = new Map();
 
     /** Create empty array with number of races */
@@ -55,15 +56,16 @@ function getGlobalRanking() {
         getRankingByRace(`Race ${raceNumber}`)
     ).forEach((positions) => {
         /** For every race set the pilot and position */
-        positions.forEach(({ pilot }, position) => {
-            const valuePilot = ranking.get(pilot.name) || 0;
-            ranking.set(pilot.name, position + valuePilot);
+        positions.forEach((pilot, position) => {
+            const valuePilot = ranking.get(pilot.name)?.position || 0;
+            ranking.set(pilot.name, { pilot, position: (valuePilot + position) });
         });
     })
 
     /** Sort all the positions for all the races */
-    return Array.from(ranking, ([name, position]) => ({ name, position }))
-        .sort((driver1, driver2) => driver1.position - driver2.position);
+    return Array.from(ranking, ([name, pilot]) => (pilot))
+        .sort((driver1, driver2) => driver1.position - driver2.position)
+        .map(ranking => ranking.pilot);
 }
 
 /**
@@ -74,6 +76,3 @@ function getGlobalRanking() {
 function sortTime(time1, time2) {
     return moment(time1, 'h:mm:ss:SSS').diff(moment(time2, 'h:mm:ss:SSS'))
 }
-
-
-export { getPilot, getRankingByRace, getRankingByPilot, getPilotRace as getRacePilotByName, getGlobalRanking };

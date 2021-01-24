@@ -1,30 +1,44 @@
 import './App.css';
-import { getRankingByPilot, getRankingByRace,getGlobalRanking } from './data/karts.utils';
+import { getRankingByPilot, getRankingByRace, getGlobalRanking } from './data/karts.utils';
+import 'react-bulma-components/dist/react-bulma-components.min.css';
+import Navbar from 'components/navbar';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import GlobalRanking from 'pages/global-ranking'
+import PilotRaces from 'pages/pilot-races'
 
 function App() {
 
-  console.log('getRankingByRace',getRankingByRace('Race 0'));
-  console.log('getRankingByPilot',getRankingByPilot('Daniels Manning'));
-  console.log('getGlobalRanking',getGlobalRanking());
+    console.log('getRankingByRace', getRankingByRace('Race 0'));
+    console.log('getRankingByPilot', getRankingByPilot('Daniels Manning'));
+    console.log('getGlobalRanking', getGlobalRanking());
 
-  return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
-  );
+    return (
+        <>
+            <BrowserRouter>
+                <Navbar></Navbar>
+                <div className="App">
+                    <Switch>
+                        <Route
+                            exact
+                            path="/">
+                            <GlobalRanking></GlobalRanking>
+                        </Route>
+                        <Route
+                            exact
+                            path="/pilot-races" >
+                            <PilotRaces></PilotRaces>
+                        </Route>
+                        {/* <Route
+                            exact
+                            path="/page2"
+                            render={() => <Page2 />} />
+                            https://medium.com/@simonhoyos/enrutando-en-react-cd9e4ad6e3d3
+                        <Route component={PageError} /> */}
+                    </Switch>
+                </div>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
