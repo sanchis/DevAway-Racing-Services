@@ -7,7 +7,7 @@ const pilots = getGlobalRanking();
 export default function PilotRaces() {
     return (
         <>
-            <h1 className="is-size-1">Pilot Ranking</h1>
+            <h1 >Pilot Ranking</h1>
             {pilots.map((pilot, positon) =>
                 <>
                     <Pilot key={pilot.name} position={positon + 1} pilot={pilot} ></Pilot>
