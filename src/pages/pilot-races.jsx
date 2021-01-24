@@ -1,5 +1,5 @@
 import Pilot from "components/pilot";
-import { getRankingByPilot, getGlobalRanking, getRankingByRace } from "data/karts.utils";
+import { getRankingByPilot, getGlobalRanking } from "data/karts.utils";
 import Race from 'components/race'
 
 
@@ -11,10 +11,8 @@ export default function PilotRaces() {
             {pilots.map((pilot, positon) =>
                 <>
                     <Pilot key={pilot.name} position={positon + 1} pilot={pilot} ></Pilot>
-
-                    {/* { JSON.stringify(getRankingByPilot(pilot.name))} */}
                     {getRankingByPilot(pilot.name).races.map((race, index) =>
-                        <Race key={pilot.name} race={race} hightLightPilot={pilot.name} ></Race>
+                        <Race name={`Race ${index + 1}`} key={pilot.name + index} race={race} hightLightPilot={pilot.name} ></Race>
                     )}
 
                 </>
