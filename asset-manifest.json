@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/DevAway-Racing-Services/static/css/main.c8bb8029.chunk.css",
+    "main.css": "/DevAway-Racing-Services/static/css/main.fb6a6a80.chunk.css",
     "main.js": "/DevAway-Racing-Services/static/js/main.097766a8.chunk.js",
     "main.js.map": "/DevAway-Racing-Services/static/js/main.097766a8.chunk.js.map",
     "runtime-main.js": "/DevAway-Racing-Services/static/js/runtime-main.7e10c71b.js",
@@ -12,14 +12,14 @@
     "static/js/3.4d7e029e.chunk.js.map": "/DevAway-Racing-Services/static/js/3.4d7e029e.chunk.js.map",
     "index.html": "/DevAway-Racing-Services/index.html",
     "static/css/2.17980b61.chunk.css.map": "/DevAway-Racing-Services/static/css/2.17980b61.chunk.css.map",
-    "static/css/main.c8bb8029.chunk.css.map": "/DevAway-Racing-Services/static/css/main.c8bb8029.chunk.css.map",
+    "static/css/main.fb6a6a80.chunk.css.map": "/DevAway-Racing-Services/static/css/main.fb6a6a80.chunk.css.map",
     "static/js/2.a18edf2a.chunk.js.LICENSE.txt": "/DevAway-Racing-Services/static/js/2.a18edf2a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7e10c71b.js",
     "static/css/2.17980b61.chunk.css",
     "static/js/2.a18edf2a.chunk.js",
-    "static/css/main.c8bb8029.chunk.css",
+    "static/css/main.fb6a6a80.chunk.css",
     "static/js/main.097766a8.chunk.js"
   ]
 }
