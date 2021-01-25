@@ -1,6 +1,7 @@
 import { Navbar as BulmaNavbar } from 'react-bulma-components';
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import './styles.css';
 
 export default function Navbar() {
     const [isActive, setIsActive] = React.useState(false);
@@ -10,7 +11,7 @@ export default function Navbar() {
             active={isActive}
             color="primary">
             <BulmaNavbar.Brand>
-                <BulmaNavbar.Item renderAs="a" href="#">
+                <BulmaNavbar.Item renderAs="a" href="#" className="brand" >
                     DevAway Racing Services
                 </BulmaNavbar.Item>
                 <BulmaNavbar.Burger onClick={() => setIsActive(!isActive)} />
