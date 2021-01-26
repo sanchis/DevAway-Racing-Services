@@ -1,5 +1,4 @@
 import './App.css';
-import { getRankingByPilot, getRankingByRace, getGlobalRanking } from './data/karts.utils';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
@@ -11,10 +10,6 @@ import Navbar from 'components/navbar';
 import { Container, Section } from 'react-bulma-components'
 
 function App() {
-
-  console.log('getRankingByRace', getRankingByRace('Race 0'));
-  console.log('getRankingByPilot', getRankingByPilot('Daniels Manning'));
-  console.log('getGlobalRanking', getGlobalRanking());
 
   return (
     <>

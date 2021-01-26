@@ -4,10 +4,10 @@ import { RACES_COUNT } from '../config';
 
 /**
  * Get data form pilot name
- * @param {*} name 
+ * @param {*} id 
  */
-export function getPilot(name) {
-    return drivers.find(driver => driver.name === name);
+export function getPilot(id) {
+    return drivers.find(driver => driver._id === id);
 }
 
 /**
@@ -28,10 +28,10 @@ export function getRankingByRace(raceName) {
 
 /**
  * Get ranking by pilot name
- * @param {*} pilotName 
+ * @param {*} id 
  */
-export function getRankingByPilot(pilotName) {
-    const pilot = getPilot(pilotName);
+export function getRankingByPilot(id) {
+    const pilot = getPilot(id);
     const races = pilot.races.map(race => getRankingByRace(race.name));
     return { pilot, races };
 }
@@ -53,8 +53,8 @@ export function getGlobalRanking() {
     getRaces().forEach((positions) => {
         /** For every race set the pilot and position */
         positions.forEach((pilot, position) => {
-            const valuePilot = ranking.get(pilot.name)?.position || 0;
-            ranking.set(pilot.name, { pilot, position: (valuePilot + position) });
+            const valuePilot = ranking.get(pilot._id)?.position || 0;
+            ranking.set(pilot._id, { pilot, position: (valuePilot + position) });
         });
     })
 
