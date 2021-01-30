@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/DevAway-Racing-Services/static/css/main.fb6a6a80.chunk.css",
-    "main.js": "/DevAway-Racing-Services/static/js/main.573173de.chunk.js",
-    "main.js.map": "/DevAway-Racing-Services/static/js/main.573173de.chunk.js.map",
+    "main.css": "/DevAway-Racing-Services/static/css/main.c673155b.chunk.css",
+    "main.js": "/DevAway-Racing-Services/static/js/main.afdfe3a1.chunk.js",
+    "main.js.map": "/DevAway-Racing-Services/static/js/main.afdfe3a1.chunk.js.map",
     "runtime-main.js": "/DevAway-Racing-Services/static/js/runtime-main.7e10c71b.js",
     "runtime-main.js.map": "/DevAway-Racing-Services/static/js/runtime-main.7e10c71b.js.map",
     "static/css/2.17980b61.chunk.css": "/DevAway-Racing-Services/static/css/2.17980b61.chunk.css",
-    "static/js/2.3a0102bc.chunk.js": "/DevAway-Racing-Services/static/js/2.3a0102bc.chunk.js",
-    "static/js/2.3a0102bc.chunk.js.map": "/DevAway-Racing-Services/static/js/2.3a0102bc.chunk.js.map",
+    "static/js/2.2d915d25.chunk.js": "/DevAway-Racing-Services/static/js/2.2d915d25.chunk.js",
+    "static/js/2.2d915d25.chunk.js.map": "/DevAway-Racing-Services/static/js/2.2d915d25.chunk.js.map",
     "static/js/3.4d7e029e.chunk.js": "/DevAway-Racing-Services/static/js/3.4d7e029e.chunk.js",
     "static/js/3.4d7e029e.chunk.js.map": "/DevAway-Racing-Services/static/js/3.4d7e029e.chunk.js.map",
     "index.html": "/DevAway-Racing-Services/index.html",
     "static/css/2.17980b61.chunk.css.map": "/DevAway-Racing-Services/static/css/2.17980b61.chunk.css.map",
-    "static/css/main.fb6a6a80.chunk.css.map": "/DevAway-Racing-Services/static/css/main.fb6a6a80.chunk.css.map",
-    "static/js/2.3a0102bc.chunk.js.LICENSE.txt": "/DevAway-Racing-Services/static/js/2.3a0102bc.chunk.js.LICENSE.txt"
+    "static/css/main.c673155b.chunk.css.map": "/DevAway-Racing-Services/static/css/main.c673155b.chunk.css.map",
+    "static/js/2.2d915d25.chunk.js.LICENSE.txt": "/DevAway-Racing-Services/static/js/2.2d915d25.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7e10c71b.js",
     "static/css/2.17980b61.chunk.css",
-    "static/js/2.3a0102bc.chunk.js",
-    "static/css/main.fb6a6a80.chunk.css",
-    "static/js/main.573173de.chunk.js"
+    "static/js/2.2d915d25.chunk.js",
+    "static/css/main.c673155b.chunk.css",
+    "static/js/main.afdfe3a1.chunk.js"
   ]
 }
