@@ -1,6 +1,5 @@
 
-import { MAX_SECONDS_PAGE } from 'config';
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 import SliderControls from 'components/slider-controls'
 
