@@ -53,6 +53,7 @@ export function getGlobalRanking() {
     getRaces().forEach((positions) => {
         /** For every race set the pilot and position */
         positions.forEach((pilot, position) => {
+            pilot.races = pilot?.races ?? getRankingByPilot(pilot._id).races;
             const valuePilot = ranking.get(pilot._id)?.position || 0;
             ranking.set(pilot._id, { pilot, position: (valuePilot + position) });
         });

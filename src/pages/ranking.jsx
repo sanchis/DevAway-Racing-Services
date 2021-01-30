@@ -1,13 +1,15 @@
 import Pilot from "components/pilot";
-import { getGlobalRanking } from "data/karts.utils";
+import kartsContext from "context/karts.context";
+import { useContext } from "react";
 
 
-const pilots = getGlobalRanking();
 export default function Ranking() {
+    const context = useContext(kartsContext);
+
     return (
         <>
             <h1 className="is-size-1">Global Ranking</h1>
-            {pilots.map((pilot, position) => <Pilot key={pilot.name} position={position + 1} pilot={pilot} ></Pilot>)}
+            {context.globalRanking.map((pilot, position) => <Pilot key={pilot.name} position={position + 1} pilot={pilot} ></Pilot>)}
         </>
     );
 }

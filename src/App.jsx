@@ -11,33 +11,33 @@ import { Container, Section } from 'react-bulma-components'
 
 function App() {
 
-  return (
-    <>
-      <BrowserRouter basename="/DevAway-Racing-Services">
-        <Navbar></Navbar>
-        <Section>
-          <Container>
-            <Switch>
-              <Route
-                exact
-                path="/">
-                <Ranking></Ranking>
-              </Route>
-              <Route
-                exact
-                path="/pilot-races" >
-                <PilotRaces></PilotRaces>
-              </Route>
-              <Route
-                exact
-                path="/races"
-                render={() => <Races />} />
-            </Switch>
-          </Container>
-        </Section>
-      </BrowserRouter>
-    </>
-  );
+    return (
+        <>
+            <BrowserRouter basename="/DevAway-Racing-Services">
+                <Navbar></Navbar>
+                <Section>
+                    <Container>
+                        <Switch>
+                            <Route
+                                exact
+                                path="/">
+                                <Ranking></Ranking>
+                            </Route>
+                            <Route
+                                exact
+                                path="/pilot-races" >
+                                <PilotRaces></PilotRaces>
+                            </Route>
+                            <Route
+                                exact
+                                path="/races"
+                                render={() => <Races />} />
+                        </Switch>
+                    </Container>
+                </Section>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
