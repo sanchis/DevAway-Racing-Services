@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Ranking from 'pages/ranking'
 import PilotRaces from 'pages/pilot-races'
 import Races from 'pages/races'
+import Home from 'pages/home'
 
 import Navbar from 'components/navbar';
 import { Container, Section } from 'react-bulma-components'
@@ -21,6 +22,11 @@ function App() {
                             <Route
                                 exact
                                 path="/">
+                                <Home></Home>
+                            </Route>
+                            <Route
+                                exact
+                                path="/ranking" >
                                 <Ranking></Ranking>
                             </Route>
                             <Route

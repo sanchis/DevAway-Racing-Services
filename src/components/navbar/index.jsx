@@ -11,14 +11,14 @@ export default function Navbar() {
             active={isActive}
             color="primary">
             <BulmaNavbar.Brand>
-                <BulmaNavbar.Item renderAs="a" href="#" className="brand" >
-                    DevAway Racing Services
-                </BulmaNavbar.Item>
+                <NavLink className="brand" to="/" exact >
+                    <img src="./logo-mini.png" alt="" />
+                </NavLink>
                 <BulmaNavbar.Burger onClick={() => setIsActive(!isActive)} />
             </BulmaNavbar.Brand>
             <BulmaNavbar.Menu >
                 <BulmaNavbar.Container>
-                    <NavLink className="navbar-item" to="/" exact activeClassName="is-active">Global Ranking</NavLink>
+                    <NavLink className="navbar-item" to="/ranking" exact activeClassName="is-active">Global Ranking</NavLink>
                     <NavLink className="navbar-item" to="/pilot-races" activeClassName="is-active">Pilot Races</NavLink>
                     <NavLink className="navbar-item" to="/races" activeClassName="is-active">Races</NavLink>
                 </BulmaNavbar.Container>

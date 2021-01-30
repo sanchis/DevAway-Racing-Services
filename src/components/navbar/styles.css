@@ -2,36 +2,8 @@
     color:black !important;
 }
 
-
-.navbar {
-    width: 100px;
-    height: 100vh;
-    position: fixed;
-    flex-direction: column;
-  }
- 
-
-  
-  .navbar-menu {
-    flex-direction: column;
-  }
- 
-
-  
-  .navbar-start {
-    flex-direction: column;
-  }
- 
-
-  
-  .navbar-brand {
-    overflow: hidden;
-  }
- 
-
-  
-  .brand {
-    width: 100%;
-    text-align: center;
-  }
-  
+.brand img{
+    width: 50px;
+    height: auto;
+    margin: auto;
+}
